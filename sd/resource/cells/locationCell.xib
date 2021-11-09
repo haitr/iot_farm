@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="323" id="xhp-k7-LvV" customClass="LocationCell" customModule="sd" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="323"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xhp-k7-LvV" id="aQR-Ed-NFi">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="322.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwj-ru-gHl" userLabel="header">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위도, 경도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-gA-s9z" customClass="DSLabel" customModule="sd" customModuleProvider="target">
+                                <rect key="frame" x="15" y="13.5" width="76.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" name="Color 3"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bigSize">
+                                        <real key="value" value="21"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFm-zn-8HJ" customClass="DSLabel" customModule="sd" customModuleProvider="target">
+                                <rect key="frame" x="327" y="13.5" width="33" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" name="Color 3"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bigSize">
+                                        <real key="value" value="21"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="ACE-m1-5wT"/>
+                            <constraint firstItem="tFm-zn-8HJ" firstAttribute="centerY" secondItem="hqu-gA-s9z" secondAttribute="centerY" id="Ayh-AB-Dbt"/>
+                            <constraint firstItem="hqu-gA-s9z" firstAttribute="centerY" secondItem="xwj-ru-gHl" secondAttribute="centerY" id="FgN-ja-E0d"/>
+                            <constraint firstAttribute="trailing" secondItem="tFm-zn-8HJ" secondAttribute="trailing" constant="15" id="GZi-aX-Xsw"/>
+                            <constraint firstItem="hqu-gA-s9z" firstAttribute="leading" secondItem="xwj-ru-gHl" secondAttribute="leading" constant="15" id="OOc-SB-int"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3A-g1-5bU" userLabel="coor chart" customClass="DSLocationChartView" customModule="sd" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="50" width="375" height="252.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="knotSize">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="Color 1"/>
+                <constraints>
+                    <constraint firstItem="xwj-ru-gHl" firstAttribute="leading" secondItem="aQR-Ed-NFi" secondAttribute="leading" id="3id-wp-gca"/>
+                    <constraint firstItem="V3A-g1-5bU" firstAttribute="leading" secondItem="aQR-Ed-NFi" secondAttribute="leading" id="Kve-mG-ja4"/>
+                    <constraint firstAttribute="trailing" secondItem="V3A-g1-5bU" secondAttribute="trailing" id="Z1C-rQ-gWl"/>
+                    <constraint firstAttribute="bottom" secondItem="V3A-g1-5bU" secondAttribute="bottom" constant="20" id="e6j-7a-Fb6"/>
+                    <constraint firstItem="xwj-ru-gHl" firstAttribute="top" secondItem="aQR-Ed-NFi" secondAttribute="top" id="mZM-md-Rx8"/>
+                    <constraint firstAttribute="trailing" secondItem="xwj-ru-gHl" secondAttribute="trailing" id="qsM-Xm-Fed"/>
+                    <constraint firstItem="V3A-g1-5bU" firstAttribute="top" secondItem="xwj-ru-gHl" secondAttribute="bottom" id="ygI-mg-STU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="chart" destination="V3A-g1-5bU" id="FH8-OU-zYH"/>
+                <outlet property="title" destination="hqu-gA-s9z" id="SjD-Kb-Ah4"/>
+            </connections>
+            <point key="canvasLocation" x="-0.80000000000000004" y="82.3088455772114"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color 1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color 3">
+            <color red="0.082000002264976501" green="0.082000002264976501" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

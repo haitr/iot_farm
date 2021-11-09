@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatisticCell" customModule="sd" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatisticCell" rowHeight="188" id="aZj-rn-gEf" customClass="StatisticCell" customModule="sd" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aZj-rn-gEf" id="T4j-Eh-YiU">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPy-Gl-vmn" userLabel="header">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경사도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCR-Yq-COC" customClass="DSLabel" customModule="sd" customModuleProvider="target">
+                                <rect key="frame" x="15" y="13.5" width="49.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bigSize">
+                                        <real key="value" value="21"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6U-IV-ccL" customClass="DSLabel" customModule="sd" customModuleProvider="target">
+                                <rect key="frame" x="280" y="13.5" width="33" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bigSize">
+                                        <real key="value" value="21"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wL-s4-lgI" userLabel="addition" customClass="DSLabel" customModule="sd" customModuleProvider="target">
+                                <rect key="frame" x="318" y="13.5" width="42" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.31764705879999999" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bigSize">
+                                        <real key="value" value="21"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8wL-s4-lgI" firstAttribute="leading" secondItem="K6U-IV-ccL" secondAttribute="trailing" constant="5" id="17J-I7-eaW"/>
+                            <constraint firstItem="FCR-Yq-COC" firstAttribute="leading" secondItem="fPy-Gl-vmn" secondAttribute="leading" constant="15" id="3Ke-og-iiO"/>
+                            <constraint firstAttribute="trailing" secondItem="8wL-s4-lgI" secondAttribute="trailing" constant="15" id="MsE-fd-26h"/>
+                            <constraint firstItem="K6U-IV-ccL" firstAttribute="centerY" secondItem="FCR-Yq-COC" secondAttribute="centerY" id="PDb-4W-mab"/>
+                            <constraint firstAttribute="height" constant="50" id="k75-Ru-KEc"/>
+                            <constraint firstItem="FCR-Yq-COC" firstAttribute="centerY" secondItem="fPy-Gl-vmn" secondAttribute="centerY" id="lxk-NU-9Hl"/>
+                            <constraint firstItem="8wL-s4-lgI" firstAttribute="centerY" secondItem="K6U-IV-ccL" secondAttribute="centerY" id="lyZ-Ef-P8v"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcs-lF-Xf3" userLabel="line chart" customClass="DSLineChartView" customModule="sd" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="50" width="375" height="117.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="knotSize">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="lineWeight">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="labelFontSize">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
+                                <color key="value" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="labelBigFontSize">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="knotBigSize">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="Color 1"/>
+                <constraints>
+                    <constraint firstItem="fPy-Gl-vmn" firstAttribute="leading" secondItem="T4j-Eh-YiU" secondAttribute="leading" id="Edd-t7-dxo"/>
+                    <constraint firstAttribute="bottom" secondItem="vcs-lF-Xf3" secondAttribute="bottom" constant="20" id="JAi-kS-N9c"/>
+                    <constraint firstAttribute="trailing" secondItem="fPy-Gl-vmn" secondAttribute="trailing" id="KCR-3s-VVT"/>
+                    <constraint firstAttribute="trailing" secondItem="vcs-lF-Xf3" secondAttribute="trailing" id="LyL-S7-zF5"/>
+                    <constraint firstItem="vcs-lF-Xf3" firstAttribute="top" secondItem="fPy-Gl-vmn" secondAttribute="bottom" id="Rtv-81-cqp"/>
+                    <constraint firstItem="fPy-Gl-vmn" firstAttribute="top" secondItem="T4j-Eh-YiU" secondAttribute="top" id="Z80-2B-iHN"/>
+                    <constraint firstItem="vcs-lF-Xf3" firstAttribute="leading" secondItem="T4j-Eh-YiU" secondAttribute="leading" id="nmR-yB-uVx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="addition" destination="8wL-s4-lgI" id="7kz-LP-veT"/>
+                <outlet property="chart" destination="vcs-lF-Xf3" id="jPv-iO-3Um"/>
+                <outlet property="title" destination="FCR-Yq-COC" id="4wL-e0-8lm"/>
+            </connections>
+            <point key="canvasLocation" x="101.59999999999999" y="67.466266866566727"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color 1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
